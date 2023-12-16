@@ -23,7 +23,11 @@ const binaryStringToArray = str => {
 
 const binaryToAscii = str => {
   // Your code here
+  const binaryArray = binaryStringToArray(str);
+  const asciiArray = binaryArray.map(binaryStr => String.fromCharCode(parseInt(binaryStr, 2)));
+  return asciiArray.join('');
 };
+
 
 /******************************************************************************/
 
